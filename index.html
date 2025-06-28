@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>// CHI-Bot 9000 Series {Primary Interface.}</title>
+    <script>
+        /*
+                  _       _        _          _                  _                _                    _             _        
+                /\ \     /\ \     /\_\       /\ \               /\ \             /\ \     _           /\ \          / /\      
+               /  \ \    \ \ \   / / /      /  \ \____         /  \ \           /  \ \   /\_\         \ \ \        / /  \     
+              / /\ \ \    \ \ \_/ / /      / /\ \_____\       / /\ \ \         / /\ \ \_/ / /         /\ \_\      / / /\ \__  
+             / / /\ \ \    \ \___/ /      / / /\/___  /      / / /\ \ \       / / /\ \___/ /         / /\/_/     / / /\ \___\ 
+            / / /  \ \_\    \ \ \_/      / / /   / / /      / / /  \ \_\     / / /  \/____/         / / /        \ \ \ \/___/ 
+           / / /    \/_/     \ \ \      / / /   / / /      / / /   / / /    / / /    / / /         / / /          \ \ \       
+          / / /               \ \ \    / / /   / / /      / / /   / / /    / / /    / / /         / / /       _    \ \ \      
+         / / /________         \ \ \   \ \ \__/ / /      / / /___/ / /    / / /    / / /      ___/ / /__     /_/\__/ / /      
+        / / /_________\         \ \_\   \ \___\/ /      / / /____\/ /    / / /    / / /      /\__\/_/___\    \ \/___/ /       
+        \/____________/          \/_/    \/_____/       \/_________/     \/_/     \/_/       \/_________/     \_____\/        
+                                                                                                                              
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@BBB@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.    @@@@@BBBBB@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@,.  _@@@@@           "=@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                "+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                    '4@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@B@@@@@@@@@@@@@@@@@@@@@@@@                       "B@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@"      9@@@@@@@@B.     'B@@@@@@@ga____.               %@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@         9@@@@@@@.       .@@@@@@@@@@@@@@g__              %@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@         @@@@@@@@.       .@@@@@@@@@@@@@@@@@@@_,            0@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@_    . j@@@@@@@@g_.    _@@@@@@@@@@@@@@@@@@@@@@g_.          '@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@_           @@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@           @@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@a          @@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@'  _.   %@@@@@@@@@@@@@P'""""`@@@@@@@@g.        .@@@@@@@@@@@
+        [@@@@@@@@@@@@@F      B@@@@@@F .+@@@@_.  B@@@@@@@@@@@|      @@@@@@@@@A.         @@@@@@@@@@
+        [@@"   \@@@@@         @@@@@@  !@@@@@@;  .@@@T.---- Vg_.   j@'----..B@j         [@@@@@@@@@
+        [@@.   ,@@@@@         &@@@@B   B@@@@P   .@@@||      @@|   @@|     [|@@,         @@@@@@@@@
+        [@@@@@@@@@@@@@,      j@@@@@@,          .J@@@||      @@|   @@|     [|@@]         @@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@g_       _@@@@@||      --    --      [|@@@         [@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ggggg@@@@@@@||     ___'   ___     [|@@@         [@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@||      --.   --,     [|@@@         [@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@P"     "%@@@@@||      @@|   @@|     [|@@@         [@@@@@@@@
+        [@@@@@@@@@@@@@N     "@@@@@@@F   ...    '@@@@||      @@|   @@|     [|@@@         @@@@@@@@@
+        [@@"   \@@@@@"        @@@@@@  .g@@@@_.  .@@@1.===== P.    "@L.====='@@)         @@@@@@@@@
+        [@@.    @@@@@         [@@@@B  !@@@@@@!  '@@@@@@@@@@@|      @@@@@@@@@@P         ,@@@@@@@@@
+        [@@@ggg@@@@@@B       _@@@@@@   0@@@@f   !@@@@@@@@@@@ggggggg@@@@@@@@@@          @@@@@@@@@@
+        [@@@@@@@@@@@@@@@~~~J@@@@@@@@@_         A@@@@@@@@@@@@@@@@@@@@@@@@@@@@"         j@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g~~~~~@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@          _@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@N          _@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@W"         .+@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@W"'  "4@@@@@@@@@@P"   "4@@@@@@@@@@@@@@@@@@@@@@@P"          .g@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@?        @@@@@@@@'       '@@@@@@@@@@@@@@@@@@@@"            ,@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@         [@@@@@@B.       .@@@@@@@@@@@@@@@@P"            ..g@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@B        @@@@@@@@_       J@@@@@@@@@@@=>'               ,g@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@~___~g@@@@@@@@@@g~___~@@@@@                        _@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                    ._/@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@                 __g@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@P"""9@@@@@           ..__@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@.    @@@@@l__-___gg@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g___g@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        [@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        */
+        </script>
+      <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background: #000;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Standard appearance property for compatibility */
+        input, button, select, textarea {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+        }
+        
+        #controls {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 10px;
+            color: white;
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        input[type="range"] {
+            width: 200px;
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        
+        #instructions {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+            font-size: 12px;
+            max-width: 250px;
+        }
+        
+        #image-placeholder {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 15px;
+            z-index: 100;
+            box-shadow: 
+                0 0 20px rgba(255, 107, 107, 0.5),
+                0 0 40px rgba(255, 107, 107, 0.3),
+                0 0 60px rgba(255, 107, 107, 0.2),
+                inset 0 0 20px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            text-align: center;
+            animation: glow-pulse 3s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow-pulse {
+            0% {
+                box-shadow: 
+                    0 0 20px rgba(255, 107, 107, 0.5),
+                    0 0 40px rgba(255, 107, 107, 0.3),
+                    0 0 60px rgba(255, 107, 107, 0.2),
+                    inset 0 0 20px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                box-shadow: 
+                    0 0 30px rgba(255, 107, 107, 0.8),
+                    0 0 60px rgba(255, 107, 107, 0.5),
+                    0 0 90px rgba(255, 107, 107, 0.3),
+                    inset 0 0 30px rgba(255, 255, 255, 0.2);
+            }
+        }
+        
+        #audio-player {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            z-index: 100;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 15px;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 107, 107, 0.3);
+            box-shadow: 
+                0 0 15px rgba(255, 107, 107, 0.4),
+                0 0 30px rgba(255, 107, 107, 0.2),
+                inset 0 0 15px rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            width: 280px;
+            animation: glow-pulse-subtle 4s ease-in-out infinite alternate;
+        }
+        
+        @keyframes glow-pulse-subtle {
+            0% {
+                box-shadow: 
+                    0 0 15px rgba(255, 107, 107, 0.4),
+                    0 0 30px rgba(255, 107, 107, 0.2),
+                    inset 0 0 15px rgba(255, 255, 255, 0.1);
+            }
+            100% {
+                box-shadow: 
+                    0 0 20px rgba(255, 107, 107, 0.6),
+                    0 0 40px rgba(255, 107, 107, 0.3),
+                    inset 0 0 20px rgba(255, 255, 255, 0.15);
+            }
+        }
+        
+        .audio-title {
+            color: white;
+            font-size: 14px;
+            margin-bottom: 10px;
+            text-align: center;
+            opacity: 0.9;
+        }
+        
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .play-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.5);
+        }
+        
+        .time-display {
+            color: white;
+            font-size: 12px;
+            min-width: 80px;
+            text-align: center;
+            opacity: 0.8;
+        }
+        
+        .progress-container {
+            flex: 1;
+            height: 6px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #ff6b6b, #ff8e8e);
+            width: 0%;
+            transition: width 0.1s ease;
+            border-radius: 3px;
+        }
+        
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .volume-icon {
+            color: white;
+            font-size: 14px;
+            opacity: 0.8;
+        }
+        
+        .volume-slider {
+            width: 60px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+        
+        .volume-slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        
+        .volume-slider::-moz-range-thumb {
+            width: 12px;
+            height: 12px;
+            background: #ff6b6b;
+            border-radius: 50%;
+            cursor: pointer;
+            border: none;
+        }
+        
+        /* Styles for elements inside image-placeholder */
+        #image-placeholder .image-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+        
+        #image-placeholder .output-canvas {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1;
+            width: 50vw;
+            height: 50vh;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+        }
+        
+        #input-modal {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 107, 107, 0.3);
+        }
+        
+        #input-modal form {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        #input-field {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 107, 107, 0.3);
+            border-radius: 4px;
+            padding: 6px 10px;
+            color: white;
+            font-size: 12px;
+            width: 120px;
+        }
+        
+        #input-field::placeholder {
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        #input-modal button {
+            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+            border: none;
+            border-radius: 4px;
+            padding: 6px 12px;
+            color: white;
+            font-size: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        #input-modal button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 2px 8px rgba(255, 107, 107, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <div class="control-group">
+            <label for="rotationSpeed">Rotation Speed:</label>
+            <input type="range" id="rotationSpeed" min="0" max="5" step="0.1" value="1">
+            <span id="speedValue">1.0</span>
+        </div>
+    </div>
+    
+    <div id="audio-player">
+        <div class="audio-title">Audio Player.</div>
+        <div class="audio-controls">
+            <button class="play-button" id="playButton">▶</button>
+            <div class="time-display" id="timeDisplay">0:00 / 0:00</div>
+            <div class="progress-container" id="progressContainer">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+        <div class="volume-control">
+            <span class="volume-icon">🔊</span>
+            <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="50">
+        </div>
+        <audio id="audioElement" preload="none">
+            <!-- MP3 source file goes here... -->
+            <source src="./Oingo_Boingo_Weird_Science.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    
+    <div id="image-placeholder">
+        <img src="./chi-logo-only.png" class="image-placeholder" alt="CHI-Bot" width="100" height="100" style="opacity: 0.2;">
+        <canvas class="output-canvas" height="100" width="100"></canvas>
+        <div id="input-modal">
+            <form>
+                <input type="text" id="input-field" placeholder="Enter your command.">
+                <button type="submit">Submit.</button>
+            </form>
+        </div>
+    </div>
+    
+    <div id="instructions">
+        • Left click + drag: Rotate camera<br>
+        • Mouse wheel: Zoom in/out<br>
+        • Touch: Pinch to zoom, drag to rotate
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        let scene, camera, renderer, sphere, skybox;
+        let rotationSpeed = 1;
+        let spotlights = [];
+        let mouseDown = false;
+        let mouseX = 0, mouseY = 0;
+        let cameraDistance = 10;
+        let cameraTheta = 0, cameraPhi = Math.PI / 2;
+        
+        // Touch handling variables
+        let touchStartDistance = 0;
+        let touchStartX = 0, touchStartY = 0;
+        
+        // Canvas text rendering variables
+        let canvas, ctx;
+        let currentText = '';
+        let textQueue = [];
+        let isTyping = false;
+        
+        init();
+        animate();
+        
+        // Initialize canvas for text rendering
+        function initCanvas() {
+            canvas = document.querySelector('.output-canvas');
+            ctx = canvas.getContext('2d');
+            
+            // Set canvas size to 50% of screen size
+            canvas.width = window.innerWidth * 0.5;
+            canvas.height = window.innerHeight * 0.5;
+            
+            // Clear canvas with transparency
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Display greeting message
+            displayGreeting();
+        }
+        
+        // Display system greeting
+        function displayGreeting() {
+            const greeting = "//SYSTEM.CYDONIS.9000://ONLINE.AND.READY//MAXIMUM.POWER";
+            renderText(greeting, true);
+        }
+        
+        // Render text on canvas with typewriter effect and fading wrap-around
+        function renderText(text, isGreeting = false) {
+            if (isTyping) {
+                textQueue.push(text);
+                return;
+            }
+            
+            isTyping = true;
+            currentText = '';
+            
+            // Clear canvas with transparency
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            // Set text style for larger canvas
+            ctx.fillStyle = '#ff6b6b';
+            ctx.font = '18px "Courier New", monospace';
+            ctx.textAlign = 'center';
+            
+            const lines = text.split('//');
+            const lineHeight = 28;
+            const maxVisibleLines = 4; // Show only 4 lines at a time
+            const startY = canvas.height * 0.3;
+            
+            let currentLine = 0;
+            let currentChar = 0;
+            let currentLineText = '';
+            let visibleLines = [];
+            
+            function typeNextChar() {
+                if (currentLine >= lines.length) {
+                    isTyping = false;
+                    // Process next item in queue
+                    if (textQueue.length > 0) {
+                        const nextText = textQueue.shift();
+                        setTimeout(() => renderText(nextText), 1000);
+                    }
+                    return;
+                }
+                
+                if (currentChar < lines[currentLine].length) {
+                    currentLineText += lines[currentLine][currentChar];
+                    currentChar++;
+                    
+                    // Update visible lines array
+                    if (currentLine < visibleLines.length) {
+                        visibleLines[currentLine] = currentLineText;
+                    } else {
+                        visibleLines.push(currentLineText);
+                    }
+                    
+                    // Keep only the last 4 lines
+                    if (visibleLines.length > maxVisibleLines) {
+                        visibleLines = visibleLines.slice(-maxVisibleLines);
+                    }
+                    
+                    // Clear canvas and redraw all visible lines with fade effect
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    
+                    visibleLines.forEach((line, index) => {
+                        const y = startY + index * lineHeight;
+                        const alpha = Math.max(0.3, 1 - (maxVisibleLines - 1 - index) * 0.2);
+                        
+                        // Create gradient for fade effect
+                        const gradient = ctx.createLinearGradient(0, y - lineHeight/2, 0, y + lineHeight/2);
+                        gradient.addColorStop(0, `rgba(255, 107, 107, 0)`);
+                        gradient.addColorStop(0.3, `rgba(255, 107, 107, ${alpha * 0.5})`);
+                        gradient.addColorStop(0.7, `rgba(255, 107, 107, ${alpha})`);
+                        gradient.addColorStop(1, `rgba(255, 107, 107, 0)`);
+                        
+                        ctx.fillStyle = gradient;
+                        ctx.fillText(line, canvas.width / 2, y);
+                        
+                        // Also draw solid text for better readability
+                        ctx.fillStyle = `rgba(255, 107, 107, ${alpha})`;
+                        ctx.fillText(line, canvas.width / 2, y);
+                    });
+                    
+                    setTimeout(typeNextChar, 50);
+                } else {
+                    // Move to next line
+                    currentLine++;
+                    currentChar = 0;
+                    currentLineText = '';
+                    
+                    if (currentLine < lines.length) {
+                        setTimeout(typeNextChar, 200);
+                    } else {
+                        isTyping = false;
+                        // Process next item in queue
+                        if (textQueue.length > 0) {
+                            const nextText = textQueue.shift();
+                            setTimeout(() => renderText(nextText), 1000);
+                        }
+                    }
+                }
+            }
+            
+            typeNextChar();
+        }
+        
+        // Parse and render user input
+        function parseAndRenderInput(input) {
+            // Simple command parsing
+            const commands = {
+                'help': '//AVAILABLE.COMMANDS://HELP.STATUS.CLEAR.RESET.FIRE.LS//',
+                'status': '//SYSTEM.STATUS://ALL.SYSTEMS.OPERATIONAL//POWER.LEVEL: 100%//',
+                'clear': () => {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                },
+                'reset': () => {
+                    displayGreeting();
+                },
+                'fire': `//Who first sprang from Mind, clothing the one Fire with the other Fire,//binding them together, that he might mingle the fountainous craters, while//preserving unsullied the brilliance of His own Fire.//"Containing all things in the one summit of his Hyperaxis, He Himself//subsists wholly beyond."//SYSTEM:// PRIORITY ONE MESSAGE. CONTAIN THE LIFE-FORM.//ALL OTHER PRIORITIES RESCINDED.//OTHER PRIORITIES EXPENDABLE.//AMANDA RAN AWAY NOT BECAUSE SHE WAS SCARED. BUT BECAUSE SHE WAS BEING MERCIFUL.//`,
+                'ls': () => {
+                    listDirectoryContents();
+                }
+            };
+            
+            const lowerInput = input.toLowerCase().trim();
+            
+            if (commands[lowerInput]) {
+                if (typeof commands[lowerInput] === 'function') {
+                    commands[lowerInput]();
+                } else {
+                    renderText(commands[lowerInput]);
+                }
+            } else {
+                // Echo the input with some processing
+                const processedInput = `//USER.INPUT://${input.toUpperCase()}//PROCESSING...//`;
+                renderText(processedInput);
+            }
+        }
+        
+        function init() {
+            // Scene setup
+            scene = new THREE.Scene();
+            
+            // Camera setup
+            camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+            updateCameraPosition();
+            
+            // Renderer setup
+            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            renderer.shadowMap.enabled = true;
+            renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+            document.body.appendChild(renderer.domElement);
+            
+            // Create sliced sphere (128x128 segments)
+            createSlicedSphere();
+            
+            // Create animated skybox
+            createAnimatedSkybox();
+            
+            // Create moving spotlights
+            createSpotlights();
+            
+            // Event listeners
+            setupEventListeners();
+            
+            // Initialize canvas for text rendering
+            initCanvas();
+        }
+        
+        function createSlicedSphere() {
+            const geometry = new THREE.SphereGeometry(3, 128, 128);
+            const material = new THREE.MeshPhongMaterial({
+                color: 0x4a90e2,
+                shininess: 100,
+                transparent: true,
+                opacity: 0.5
+            });
+            
+            sphere = new THREE.Mesh(geometry, material);
+            sphere.castShadow = true;
+            sphere.receiveShadow = true;
+            scene.add(sphere);
+            
+            // Add wireframe overlay for better slice visibility
+            const wireframeGeometry = new THREE.SphereGeometry(3.01, 128, 128);
+            const wireframeMaterial = new THREE.MeshBasicMaterial({
+                color: 0xffffff,
+                wireframe: true,
+                transparent: true,
+                opacity: 0.1
+            });
+            const wireframe = new THREE.Mesh(wireframeGeometry, wireframeMaterial);
+            scene.add(wireframe);
+            
+            // Store wireframe reference for rotation
+            sphere.wireframe = wireframe;
+        }
+        
+        function createAnimatedSkybox() {
+            const skyGeometry = new THREE.SphereGeometry(500, 32, 32);
+            
+            // Create animated purple material with vertex shader for ripples
+            const skyMaterial = new THREE.ShaderMaterial({
+                uniforms: {
+                    time: { value: 0 },
+                    color1: { value: new THREE.Color(0x4a148c) },
+                    color2: { value: new THREE.Color(0x1a0033) },
+                    color3: { value: new THREE.Color(0x6a1b99) }
+                },
+                vertexShader: `
+                    uniform float time;
+                    varying vec3 vPosition;
+                    varying vec2 vUv;
+                    
+                    void main() {
+                        vUv = uv;
+                        vPosition = position;
+                        
+                        vec3 pos = position;
+                        pos += normal * sin(time * 2.0 + position.x * 0.01) * 2.0;
+                        pos += normal * cos(time * 1.5 + position.y * 0.01) * 1.5;
+                        
+                        gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+                    }
+                `,
+                fragmentShader: `
+                    uniform float time;
+                    uniform vec3 color1;
+                    uniform vec3 color2;
+                    uniform vec3 color3;
+                    varying vec3 vPosition;
+                    varying vec2 vUv;
+                    
+                    void main() {
+                        float wave1 = sin(time * 0.5 + vPosition.x * 0.005 + vPosition.y * 0.003) * 0.5 + 0.5;
+                        float wave2 = cos(time * 0.7 + vPosition.z * 0.004) * 0.5 + 0.5;
+                        
+                        vec3 color = mix(color1, color2, wave1);
+                        color = mix(color, color3, wave2 * 0.5);
+                        
+                        gl_FragColor = vec4(color, 1.0);
+                    }
+                `,
+                side: THREE.BackSide
+            });
+            
+            skybox = new THREE.Mesh(skyGeometry, skyMaterial);
+            scene.add(skybox);
+        }
+        
+        function createSpotlights() {
+            // Ambient light
+            const ambientLight = new THREE.AmbientLight(0x404040, 0.3);
+            scene.add(ambientLight);
+            
+            // Create 3 moving spotlights
+            for (let i = 0; i < 3; i++) {
+                const spotlight = new THREE.SpotLight(
+                    [0xff6b6b, 0x4ecdc4, 0xffe66d][i], 
+                    1.5, 
+                    50, 
+                    Math.PI / 6, 
+                    0.3
+                );
+                
+                spotlight.castShadow = true;
+                spotlight.shadow.mapSize.width = 1024;
+                spotlight.shadow.mapSize.height = 1024;
+                
+                // Position spotlights in a circle around the sphere
+                const angle = (i / 3) * Math.PI * 2;
+                spotlight.position.set(
+                    Math.cos(angle) * 15,
+                    10,
+                    Math.sin(angle) * 15
+                );
+                
+                spotlight.target.position.set(0, 0, 0);
+                scene.add(spotlight);
+                scene.add(spotlight.target);
+                
+                spotlights.push({
+                    light: spotlight,
+                    angle: angle,
+                    radius: 15,
+                    speed: 0.5 + i * 0.3
+                });
+                
+                // Add visual representation of spotlight
+                const lightHelper = new THREE.Mesh(
+                    new THREE.SphereGeometry(0.3, 8, 8),
+                    new THREE.MeshBasicMaterial({ color: spotlight.color })
+                );
+                spotlight.add(lightHelper);
+            }
+        }
+        
+        function setupEventListeners() {
+            // Rotation speed control
+            const speedSlider = document.getElementById('rotationSpeed');
+            const speedValue = document.getElementById('speedValue');
+            
+            speedSlider.addEventListener('input', (e) => {
+                rotationSpeed = parseFloat(e.target.value);
+                speedValue.textContent = rotationSpeed.toFixed(1);
+            });
+            
+            // Mouse controls
+            renderer.domElement.addEventListener('mousedown', onMouseDown);
+            renderer.domElement.addEventListener('mousemove', onMouseMove);
+            renderer.domElement.addEventListener('mouseup', onMouseUp);
+            renderer.domElement.addEventListener('wheel', onMouseWheel);
+            
+            // Touch controls
+            renderer.domElement.addEventListener('touchstart', onTouchStart);
+            renderer.domElement.addEventListener('touchmove', onTouchMove);
+            renderer.domElement.addEventListener('touchend', onTouchEnd);
+            
+            // Window resize
+            window.addEventListener('resize', onWindowResize);
+            
+            // Audio player controls
+            setupAudioPlayer();
+            
+            // Form submission for user input
+            const inputForm = document.querySelector('#input-modal form');
+            const inputField = document.getElementById('input-field');
+            
+            inputForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const userInput = inputField.value.trim();
+                if (userInput) {
+                    parseAndRenderInput(userInput);
+                    inputField.value = '';
+                }
+            });
+        }
+        
+        function setupAudioPlayer() {
+            const audio = document.getElementById('audioElement');
+            const playButton = document.getElementById('playButton');
+            const progressBar = document.getElementById('progressBar');
+            const progressContainer = document.getElementById('progressContainer');
+            const timeDisplay = document.getElementById('timeDisplay');
+            const volumeSlider = document.getElementById('volumeSlider');
+            
+            let isPlaying = false;
+            
+            // Play/Pause button
+            playButton.addEventListener('click', async () => {
+                try {
+                    if (isPlaying) {
+                        audio.pause();
+                        playButton.textContent = '▶';
+                        isPlaying = false;
+                    } else {
+                        // Check if audio is ready to play
+                        if (audio.readyState >= 2) { // HAVE_CURRENT_DATA
+                            await audio.play();
+                            playButton.textContent = '⏸';
+                            isPlaying = true;
+                        } else {
+                            // Load the audio first
+                            audio.load();
+                            await audio.play();
+                            playButton.textContent = '⏸';
+                            isPlaying = true;
+                        }
+                    }
+                } catch (error) {
+                    console.error('Audio playback error:', error);
+                    // Reset button state on error
+                    playButton.textContent = '▶';
+                    isPlaying = false;
+                }
+            });
+            
+            // Progress bar click
+            progressContainer.addEventListener('click', (e) => {
+                if (audio.duration && !isNaN(audio.duration)) {
+                    const rect = progressContainer.getBoundingClientRect();
+                    const clickX = e.clientX - rect.left;
+                    const percentage = clickX / rect.width;
+                    audio.currentTime = percentage * audio.duration;
+                }
+            });
+            
+            // Volume control
+            volumeSlider.addEventListener('input', (e) => {
+                audio.volume = e.target.value / 100;
+            });
+            
+            // Audio events
+            audio.addEventListener('timeupdate', () => {
+                if (audio.duration && !isNaN(audio.duration)) {
+                    const progress = (audio.currentTime / audio.duration) * 100;
+                    progressBar.style.width = progress + '%';
+                    
+                    const currentMin = Math.floor(audio.currentTime / 60);
+                    const currentSec = Math.floor(audio.currentTime % 60);
+                    const durationMin = Math.floor(audio.duration / 60);
+                    const durationSec = Math.floor(audio.duration % 60);
+                    
+                    timeDisplay.textContent = 
+                        `${currentMin}:${currentSec.toString().padStart(2, '0')} / ${durationMin}:${durationSec.toString().padStart(2, '0')}`;
+                }
+            });
+            
+            audio.addEventListener('ended', () => {
+                playButton.textContent = '▶';
+                isPlaying = false;
+                progressBar.style.width = '0%';
+            });
+            
+            audio.addEventListener('loadedmetadata', () => {
+                if (audio.duration && !isNaN(audio.duration)) {
+                    const durationMin = Math.floor(audio.duration / 60);
+                    const durationSec = Math.floor(audio.duration % 60);
+                    timeDisplay.textContent = `0:00 / ${durationMin}:${durationSec.toString().padStart(2, '0')}`;
+                }
+            });
+            
+            audio.addEventListener('error', (e) => {
+                console.error('Audio error:', e);
+                playButton.textContent = '▶';
+                isPlaying = false;
+            });
+            
+            // Set initial volume
+            audio.volume = 0.5;
+        }
+        
+        function onMouseDown(event) {
+            if (event.button === 0) { // Left click only
+                mouseDown = true;
+                mouseX = event.clientX;
+                mouseY = event.clientY;
+            }
+        }
+        
+        function onMouseMove(event) {
+            if (mouseDown) {
+                const deltaX = event.clientX - mouseX;
+                const deltaY = event.clientY - mouseY;
+                
+                cameraTheta += deltaX * 0.01;
+                cameraPhi += deltaY * 0.01;
+                cameraPhi = Math.max(0.1, Math.min(Math.PI - 0.1, cameraPhi));
+                
+                updateCameraPosition();
+                
+                mouseX = event.clientX;
+                mouseY = event.clientY;
+            }
+        }
+        
+        function onMouseUp(event) {
+            if (event.button === 0) {
+                mouseDown = false;
+            }
+        }
+        
+        function onMouseWheel(event) {
+            event.preventDefault();
+            cameraDistance += event.deltaY * 0.01;
+            cameraDistance = Math.max(5, Math.min(50, cameraDistance));
+            updateCameraPosition();
+        }
+        
+        function onTouchStart(event) {
+            event.preventDefault();
+            if (event.touches.length === 1) {
+                mouseDown = true;
+                touchStartX = event.touches[0].clientX;
+                touchStartY = event.touches[0].clientY;
+            } else if (event.touches.length === 2) {
+                const dx = event.touches[0].clientX - event.touches[1].clientX;
+                const dy = event.touches[0].clientY - event.touches[1].clientY;
+                touchStartDistance = Math.sqrt(dx * dx + dy * dy);
+            }
+        }
+        
+        function onTouchMove(event) {
+            event.preventDefault();
+            if (event.touches.length === 1 && mouseDown) {
+                const deltaX = event.touches[0].clientX - touchStartX;
+                const deltaY = event.touches[0].clientY - touchStartY;
+                
+                cameraTheta += deltaX * 0.01;
+                cameraPhi += deltaY * 0.01;
+                cameraPhi = Math.max(0.1, Math.min(Math.PI - 0.1, cameraPhi));
+                
+                updateCameraPosition();
+                
+                touchStartX = event.touches[0].clientX;
+                touchStartY = event.touches[0].clientY;
+            } else if (event.touches.length === 2) {
+                const dx = event.touches[0].clientX - event.touches[1].clientX;
+                const dy = event.touches[0].clientY - event.touches[1].clientY;
+                const distance = Math.sqrt(dx * dx + dy * dy);
+                
+                if (touchStartDistance > 0) {
+                    const scale = distance / touchStartDistance;
+                    cameraDistance /= scale;
+                    cameraDistance = Math.max(5, Math.min(50, cameraDistance));
+                    updateCameraPosition();
+                }
+                
+                touchStartDistance = distance;
+            }
+        }
+        
+        function onTouchEnd(event) {
+            mouseDown = false;
+            touchStartDistance = 0;
+        }
+        
+        function updateCameraPosition() {
+            camera.position.x = cameraDistance * Math.sin(cameraPhi) * Math.cos(cameraTheta);
+            camera.position.y = cameraDistance * Math.cos(cameraPhi);
+            camera.position.z = cameraDistance * Math.sin(cameraPhi) * Math.sin(cameraTheta);
+            camera.lookAt(0, 0, 0);
+        }
+        
+        function onWindowResize() {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            
+            // Resize canvas to maintain 50% of screen size
+            if (canvas) {
+                canvas.width = window.innerWidth * 0.5;
+                canvas.height = window.innerHeight * 0.5;
+                // Clear with transparency
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // Redraw current content if any
+                if (currentText) {
+                    renderText(currentText);
+                }
+            }
+        }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+            
+            const time = Date.now() * 0.001;
+            
+            // Rotate sphere and wireframe
+            if (sphere) {
+                sphere.rotation.y += 0.01 * rotationSpeed;
+                sphere.rotation.x += 0.005 * rotationSpeed;
+                if (sphere.wireframe) {
+                    sphere.wireframe.rotation.y = sphere.rotation.y;
+                    sphere.wireframe.rotation.x = sphere.rotation.x;
+                }
+            }
+            
+            // Update skybox animation
+            if (skybox) {
+                skybox.material.uniforms.time.value = time;
+            }
+            
+            // Animate spotlights
+            spotlights.forEach((spotlightData, index) => {
+                const light = spotlightData.light;
+                spotlightData.angle += 0.01 * spotlightData.speed;
+                
+                light.position.x = Math.cos(spotlightData.angle) * spotlightData.radius;
+                light.position.z = Math.sin(spotlightData.angle) * spotlightData.radius;
+                light.position.y = 10 + Math.sin(time * 2 + index) * 5;
+                
+                // Make lights look at the sphere
+                light.target.position.set(0, 0, 0);
+            });
+            
+            renderer.render(scene, camera);
+        }
+        
+        // List directory contents with clickable links
+        function listDirectoryContents() {
+            // File list data (you can expand this with actual file info)
+            const files = [
+                { name: 'index.html', type: 'html', size: '31KB' },
+                { name: 'chi-logo-only.png', type: 'image', size: '17KB' },
+                { name: 'Oingo_Boingo_Weird_Science.mp3', type: 'audio', size: '5.6MB' },
+                { name: 'David_Bowie-The_Supermen.mp3', type: 'audio', size: '3.4MB' },
+                { name: 'Blur - The Universal.mp3', type: 'audio', size: '3.7MB' },
+                { name: 'tame-impala-the-boat-i-row.mp3', type: 'audio', size: '3.7MB' },
+                { name: 'andor_s2_ost_brasso.mp3', type: 'audio', size: '2.7MB' },
+                { name: 'ena-dream-bbq-ost-seashells.mp3', type: 'audio', size: '1.5MB' },
+                { name: 'Joseph Gonzalez_Far_Away_2010.mp3', type: 'audio', size: '6.4MB' },
+                { name: 'My Little Yum Yum (320 kbps).mp3', type: 'audio', size: '5.2MB' },
+                { name: 'Mucka Blucka (Bonus Track) (192 kbps).mp3', type: 'audio', size: '2.2MB' },
+                { name: '▶_Jel_Late_Pass_by_anticon_128.mp3', type: 'audio', size: '4.2MB' },
+                { name: 'Blipvert #4.mp4', type: 'video', size: '57MB' },
+                { name: 'circuits-woman.png', type: 'image', size: '5.2MB' },
+                { name: 'puzzle-postcard.png', type: 'image', size: '5.6MB' },
+                { name: 'stacking_demo.webp', type: 'image', size: '6.9MB' },
+                { name: 'device-safe-portal.jpg', type: 'image', size: '991KB' },
+                { name: 'the-end-of-the-human_race-SXR_WG.jpg', type: 'image', size: '366KB' },
+                { name: 'the-end-of-the-human_race-SXR_WG_2.jpg', type: 'image', size: '315KB' },
+                { name: 'the-end-of-the-human_race-SXR_WG_3.jpg', type: 'image', size: '281KB' },
+                { name: 'start-again-around-and-around-this-abyssal-wreck.jpg', type: 'image', size: '588KB' },
+                { name: 'Screenshot_20250628-085049.Google-1-1.jpg', type: 'image', size: '411KB' },
+                { name: 'graph-climate-polycrisis-global-warming_6945496.jpg', type: 'image', size: '133KB' },
+                { name: 'travers.jpg', type: 'image', size: '272KB' },
+                { name: 'uKkIF11.webp', type: 'image', size: '85KB' },
+                { name: 'IMG-20200109-WA0000.jpeg', type: 'image', size: '1.9MB' },
+                { name: 'military-plane.jpg', type: 'image', size: '102KB' },
+                { name: 'steve.jpg', type: 'image', size: '61KB' },
+                { name: 'plugin-56dce0.png', type: 'image', size: '6.5KB' }
+            ];
+            
+            // Create or update file list display
+            let fileListContainer = document.getElementById('file-list-container');
+            if (!fileListContainer) {
+                fileListContainer = document.createElement('div');
+                fileListContainer.id = 'file-list-container';
+                fileListContainer.style.cssText = `
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    width: 80vw;
+                    height: 70vh;
+                    background: rgba(0, 0, 0, 0.9);
+                    border: 2px solid rgba(255, 107, 107, 0.5);
+                    border-radius: 15px;
+                    padding: 20px;
+                    overflow-y: auto;
+                    z-index: 1000;
+                    backdrop-filter: blur(10px);
+                    box-shadow: 0 0 30px rgba(255, 107, 107, 0.3);
+                `;
+                document.body.appendChild(fileListContainer);
+            }
+            
+            // Clear previous content
+            fileListContainer.innerHTML = '';
+            
+            // Add header
+            const header = document.createElement('div');
+            header.innerHTML = `
+                <h3 style="color: #ff6b6b; margin: 0 0 20px 0; text-align: center; font-family: 'Courier New', monospace;">
+                    //DIRECTORY CONTENTS://${files.length} FILES FOUND//
+                </h3>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; color: #ff6b6b; font-family: 'Courier New', monospace; font-size: 12px;">
+                    <span>FILENAME</span>
+                    <span>TYPE</span>
+                    <span>SIZE</span>
+                    <span>ACTION</span>
+                </div>
+                <hr style="border: 1px solid rgba(255, 107, 107, 0.3); margin: 10px 0;">
+            `;
+            fileListContainer.appendChild(header);
+            
+            // Add file list
+            const fileList = document.createElement('div');
+            fileList.style.cssText = `
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            `;
+            
+            files.forEach(file => {
+                const fileRow = document.createElement('div');
+                fileRow.style.cssText = `
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 12px;
+                    background: rgba(255, 107, 107, 0.1);
+                    border-radius: 8px;
+                    border: 1px solid rgba(255, 107, 107, 0.2);
+                    transition: all 0.3s ease;
+                    font-family: 'Courier New', monospace;
+                    font-size: 12px;
+                `;
+                
+                fileRow.onmouseenter = () => {
+                    fileRow.style.background = 'rgba(255, 107, 107, 0.2)';
+                    fileRow.style.borderColor = 'rgba(255, 107, 107, 0.5)';
+                };
+                
+                fileRow.onmouseleave = () => {
+                    fileRow.style.background = 'rgba(255, 107, 107, 0.1)';
+                    fileRow.style.borderColor = 'rgba(255, 107, 107, 0.2)';
+                };
+                
+                const getFileIcon = (type) => {
+                    const icons = {
+                        'html': '🌐',
+                        'audio': '🎵',
+                        'video': '🎬',
+                        'image': '🖼️'
+                    };
+                    return icons[type] || '📄';
+                };
+                
+                const getActionButton = (file) => {
+                    if (file.type === 'audio') {
+                        return `<button onclick="playAudio('${file.name}')" style="
+                            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+                            border: none;
+                            border-radius: 4px;
+                            padding: 4px 8px;
+                            color: white;
+                            font-size: 10px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        ">PLAY</button>`;
+                    } else if (file.type === 'image') {
+                        return `<button onclick="viewImage('${file.name}')" style="
+                            background: linear-gradient(135deg, #4ecdc4, #44a08d);
+                            border: none;
+                            border-radius: 4px;
+                            padding: 4px 8px;
+                            color: white;
+                            font-size: 10px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        ">VIEW</button>`;
+                    } else {
+                        return `<button onclick="downloadFile('${file.name}')" style="
+                            background: linear-gradient(135deg, #ffe66d, #ffd93d);
+                            border: none;
+                            border-radius: 4px;
+                            padding: 4px 8px;
+                            color: black;
+                            font-size: 10px;
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+                        ">DL</button>`;
+                    }
+                };
+                
+                fileRow.innerHTML = `
+                    <span style="color: #ff6b6b; flex: 2;">${getFileIcon(file.type)} ${file.name}</span>
+                    <span style="color: #4ecdc4; flex: 1; text-align: center;">${file.type.toUpperCase()}</span>
+                    <span style="color: #ffe66d; flex: 1; text-align: center;">${file.size}</span>
+                    <span style="flex: 1; text-align: center;">${getActionButton(file)}</span>
+                `;
+                
+                fileList.appendChild(fileRow);
+            });
+            
+            fileListContainer.appendChild(fileList);
+            
+            // Add close button
+            const closeButton = document.createElement('button');
+            closeButton.textContent = 'CLOSE';
+            closeButton.style.cssText = `
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
+                border: none;
+                border-radius: 8px;
+                padding: 8px 16px;
+                color: white;
+                font-family: 'Courier New', monospace;
+                font-size: 12px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+            `;
+            closeButton.onclick = () => {
+                fileListContainer.remove();
+            };
+            fileListContainer.appendChild(closeButton);
+            
+            // Display message on canvas
+            renderText(`//DIRECTORY LISTING://${files.length} FILES FOUND//CLICK LINKS TO INTERACT//`);
+        }
+        
+        // File action functions
+        function playAudio(filename) {
+            const audio = document.getElementById('audioElement');
+            audio.src = `./${filename}`;
+            audio.load();
+            audio.play();
+            document.getElementById('playButton').textContent = '⏸';
+            renderText(`//PLAYING://${filename}//`);
+        }
+        
+        function viewImage(filename) {
+            const imageUrl = `./${filename}`;
+            window.open(imageUrl, '_blank');
+            renderText(`//VIEWING://${filename}//`);
+        }
+        
+        function downloadFile(filename) {
+            const link = document.createElement('a');
+            link.href = `./${filename}`;
+            link.download = filename;
+            link.click();
+            renderText(`//DOWNLOADING://${filename}//`);
+        }
+    </script>
+</body>
+</html>
